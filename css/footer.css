@@ -1,0 +1,49 @@
+footer {
+  position: relative;
+  padding: 40px 10vw;
+  width: 100%;
+  padding-bottom: 90px;
+  background-color: #4d4d4d;
+}
+
+.footerele .logo {
+  height: 250px;
+}
+
+.footerele {
+  display: flex;
+  align-items: center;
+}
+.ulfooter {
+  width: 45%;
+  justify-content: space-around;
+  display: flex;
+  padding-left: 60%;
+}
+.linkabout {
+  width: 200px;
+  display: grid;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.linkabout a {
+  color: rgb(255, 172, 78);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.linkabout a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.footerele {
+  color: rgb(211, 120, 35);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 50px;
+  width: 60%;
+  text-align: center;
+}

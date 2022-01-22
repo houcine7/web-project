@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/singup.css" />
+
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="alert">
+      <span class="closebtn">&times;</span>
+      <p class="errormsg">This is an alert box.</p>
+    </div>
+
+    <div class="singin_info">
+      <h1>Sign Up</h1>
+      <h5>Welcome to Shopping with Houcine&Abdellah</h5>
+      <form action="" method="get">
+        <div>
+          <p><label for="userNmae">User Name</label></p>
+          <input type="text" id="userName" autocomplete="off" />
+        </div>
+        <div>
+          <p><label for="email">Email Address</label></p>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div>
+          <p><label for="password">Password</label></p>
+          <input type="password" id="password" required />
+        </div>
+        <button type="button" id="btn">Sign Up Now</button>
+        <p id="login">
+          Already have an account? <a href="login.html">Log in</a>
+        </p>
+      </form>
+    </div>
+    <img src="/public/imgs/load.gif" class="loader" alt="" />
+    <script src="/public/script/singup.js"></script>
+  </body>
+</html>

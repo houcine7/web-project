@@ -1,0 +1,102 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  padding-right: 300px;
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-image: url("/public/imgs/ph.png");
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  padding-left: 30%;
+  padding-top: 10%;
+}
+
+input {
+  border: none;
+  width: 30%;
+  border-bottom: 1px solid lightgray;
+  background-color: #fbfbfb;
+  position: relative;
+  top: -10px;
+  padding: 5px;
+}
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #f69e84;
+  font-size: 14px;
+  font-weight: bold;
+}
+#password:focus {
+  color: #f69e84;
+  font-size: 16px;
+  font-weight: bold;
+}
+#btn {
+  border: none;
+  background-color: #4d4d4d;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  width: 120px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+p {
+  font-size: small;
+}
+#login {
+  color: aliceblue;
+  padding-left: 10px;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffffe1;
+}
+
+h5 {
+  font-weight: 600;
+  color: azure;
+  text-shadow: 1px 3px #4d4d4d;
+}
+
+h1 {
+  color: #4d4d4d;
+}
+
+.alert {
+  padding: 15px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  font-size: larger;
+  margin-left: 300px;
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

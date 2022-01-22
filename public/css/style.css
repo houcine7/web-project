@@ -1,0 +1,226 @@
+/* the navbar*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  height: 20px;
+}
+
+.navbar {
+  width: 100%;
+  position: sticky;
+  z-index: 9;
+  background-color: #4d4d4d;
+}
+.navb {
+  padding: 10px 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  height: 65px;
+}
+/*.logolabel {
+  padding-left: 5spx;
+  padding-top: 20px;
+  color: #f69e84;
+}*/
+.navbarelements {
+  align-items: center;
+  display: flex;
+}
+
+.search {
+  width: 500px;
+  display: flex;
+}
+.searchfield {
+  width: 80%;
+  height: 40px;
+  padding: 10px;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border: 2px solid #f69e84;
+  /* background: none; */
+  color: #4d4d4d;
+  text-transform: capitalize;
+  outline: none;
+}
+
+.searchbtn {
+  width: 20%;
+  height: 63px;
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid white;
+  color: #4d4d4d;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.searchfield::placeholder {
+  color: #4d4d4d;
+}
+.navbarelements a img {
+  width: 36px;
+  height: 36px;
+}
+.navbarelements a {
+  margin-left: 20px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 10px 10vw;
+  border-top: 1px solid #f69e84;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0 10px;
+  margin: 0 5px;
+  color: white;
+}
+
+.link:hover {
+  opacity: 1;
+  color: #000;
+}
+
+/*****the header*/
+.headercl {
+  width: 100%;
+  height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/public/imgs/ph.png");
+  background-size: cover;
+}
+.headercl .logoheader {
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+.headercl .desc {
+  margin-top: 10px;
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 4px 4px #111010;
+}
+
+/*     product style */
+
+.products {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.container_products {
+  padding: 0 10vw;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  display: flex;
+}
+.productr {
+  margin-right: 35;
+  width: 250px;
+  flex: 0 0 auto;
+  height: 450px;
+}
+
+.productsreco {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+
+.container_products::-webkit-scrollbar {
+  display: none;
+}
+
+.proimg {
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+  position: relative;
+}
+.trend {
+  width: 170%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.discouont {
+  position: absolute;
+  background-color: whitesmoke;
+  padding: 6px;
+  border-radius: 9px;
+  color: red;
+
+  right: 10px;
+  top: 10px;
+}
+
+.probtn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 90%;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  text-transform: capitalize;
+  outline: none;
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+}
+.productr:hover .probtn {
+  opacity: 1;
+}
+.probtn :hover {
+  opacity: 1;
+}
+
+.infopro {
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+}
+.namepro {
+  text-transform: capitalize;
+}
+.prodes {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+
+.newprice {
+  font-weight: 900;
+  font-size: 20px;
+  color: red;
+}
+.oldprice {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: black;
+}

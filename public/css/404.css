@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #000;
+  background: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #4d4d4d;
+}
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+#404 {
+  width: 100%;
+  max-width: 600px;
+}
+h1 {
+  width: 80%;
+  text-align: center;
+  border-top: 1px solid #f69e84;
+  color: #f69e84;
+  font-family: "Lucida Console", "Courier New", monospace;
+}

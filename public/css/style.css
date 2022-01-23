@@ -70,6 +70,7 @@ img {
   align-items: center;
   transform: translateX(-2px);
   cursor: pointer;
+  position: relative;
 }
 
 .search-icon {
@@ -125,6 +126,36 @@ img {
 .menu-bar a:hover {
   border-bottom: 2px solid #f7dbd2;
   color: #f7dbd2;
+}
+
+.categories {
+  position: absolute;
+  top: 60px;
+  /* left: 50%; */
+  background-color: #f79273;
+  color: rgb(43, 39, 39);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 300px;
+  width: 150px;
+  overflow-y: scroll;
+}
+
+.element {
+  padding: 2px 6px;
+  border-bottom: #111010c2 2px solid;
+  transition: all 0.3s;
+}
+
+.element:hover {
+  background-color: #ff6f44;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 /*/////sticky navigation bar//////*/

@@ -20,7 +20,7 @@ const createNavBar = () => {
           <span>L&A STORE</span>
         </div>
         <div class="search-field">
-          <input type="text" />
+          <input type="text" class="search-text"/>
           <button>
           <div class ="select">
             <span
@@ -35,6 +35,22 @@ const createNavBar = () => {
               data-icon="ant-design:search-outlined"
             ></span>
           </div>
+          <ul class="categories hidden">
+          <li class="element">Beaute & Parfum</li>
+          <li class="element">Beaute premium</li>
+          <li class="element">Cuisine & Maison</li>
+          <li class="element">Chaussures & Sacs</li>
+          <li class="element">Bijoux</li>
+          <li class="element">Bricolage</li>
+          <li class="element">Computers</li>
+          <li class="element">Baggages</li>
+          <li class="element">Jeux</li>
+          <li class="element">Sports</li>
+          <li class="element">Chaussures & Sacs</li>
+          <li class="element">High tech</li>
+          <li class="element">Bricolage</li>
+          <li class="element">Informatiques</li>
+        </ul>
           </button>
         </div>
         <ul class="nav-left">
@@ -56,8 +72,16 @@ const createNavBar = () => {
 `;
 };
 createNavBar();
-const categories = document.querySelector(".search-icon");
 
-categories.addEventListener("click", function () {
-  console.log("choice 1");
+const categoriesBtn = document.querySelector(".select");
+const categories = document.querySelector(".categories");
+const searchBtn = document.querySelector(".search");
+const searchInput = document.querySelector(".search-text");
+
+categoriesBtn.addEventListener("click", function () {
+  categories.classList.toggle("hidden");
+});
+
+searchBtn.addEventListener("click", function () {
+  searchInput.focus();
 });

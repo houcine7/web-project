@@ -2,17 +2,17 @@ const createNavBar = () => {
   let navBar = document.querySelector(".navigation-bar");
   let menubar = document.querySelector(".menu-bar");
   menubar.innerHTML = `  <ul class="menu-bar">
-  <li class="menu-bar-item"><a href="#">Home</a></li>
-  <li class="menu-bar-item"><a href="#">Sport</a></li>
-  <li class="menu-bar-item"><a href="#">Technology</a></li>
-  <li class="menu-bar-item"><a href="#">Clothes</a></li>
-  <li class="menu-bar-item"><a href="#">New</a></li>
-  <li class="menu-bar-item"><a href="#">Products</a></li>
-  <li class="menu-bar-item"><a href="#">Services</a></li>
-  <li class="menu-bar-item"><a href="#">Gift Cards</a></li>
-  <li class="menu-bar-item"><a href="#">Sell</a></li>
-  <li class="menu-bar-item"><a href="#">Help</a></li>
-</ul>`;
+        <li class="menu-bar-item"><a href="#">Home</a></li>
+        <li class="menu-bar-item"><a href="#">Sport</a></li>
+        <li class="menu-bar-item"><a href="#">Technology</a></li>
+        <li class="menu-bar-item"><a href="#">Clothes</a></li>
+        <li class="menu-bar-item"><a href="#">New</a></li>
+        <li class="menu-bar-item"><a href="#">Products</a></li>
+        <li class="menu-bar-item"><a href="#">Services</a></li>
+        <li class="menu-bar-item"><a href="#">Gift Cards</a></li>
+        <li class="menu-bar-item"><a href="#">Sell</a></li>
+        <li class="menu-bar-item"><a href="#">Help</a></li>
+      </ul>`;
 
   navBar.innerHTML = ` 
   <div class="logo-field">
@@ -56,7 +56,7 @@ const createNavBar = () => {
 `;
 };
 createNavBar();
-const categories = document.querySelector(".search-btn");
+const categories = document.querySelector(".search-icon");
 
 categories.addEventListener("click", function () {
   console.log("choice 1");

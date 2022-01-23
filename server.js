@@ -1,6 +1,4 @@
 const express = require("express");
-const admin = require("firebase-admin");
-const bcrypt = require("bcrypt");
 const path = require("path");
 const mysql = require("mysql");
 
@@ -38,10 +36,10 @@ app.post("/singup", (req, res) => {
   //get the data
   let { username, email, password, seller } = req.body;
 
-  console.log(username);
-  console.log(email);
-  console.log(password);
-  console.log(seller);
+  // console.log(username);
+  // console.log(email);
+  // console.log(password);
+  // console.log(seller);
   //validate the data in back-end also
 
   if (username.length < 3) {
@@ -49,11 +47,9 @@ app.post("/singup", (req, res) => {
   } else if (!email.length) {
     return res.json({ alert: "enter an email " });
   } else if (password.length < 8) {
-    return res.json({ alert: "invalid name ,name should be 4 letters" });
+    return res.json({ alert: "invalid name ,password should be 8 letters" });
   } else {
     ///stor the form data to my database
-
-    console.log("the data is good to go to the database");
     let sql = "INSERT INTO users(username,email,password,seller) VALUES(?)";
     let sql2 = "SELECT email from users";
     let values = [username, email, password, seller];
@@ -62,17 +58,16 @@ app.post("/singup", (req, res) => {
         console.log("can't execute select query");
         throw err;
       } else {
-        console.log(result);
         for (i = 0; i < result.length; i++) {
-          console.log(result[i].email);
+          // console.log(result[i].email);
           if (result[i].email == email) {
             console.log("user alredy exist ");
+
             try {
-              return res.status(404).json({
+              return res.status(200).json({
                 alert: "email already exist try another email",
               });
             } catch (err) {
-              console.log("invalid email");
               console.log(err.message);
             }
           }

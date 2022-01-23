@@ -1,5 +1,3 @@
-//const { response } = require("express");
-
 const btn = document.querySelector("#btn");
 
 const username = document.querySelector("#userName");
@@ -10,11 +8,13 @@ const password = document.querySelector("#password");
 
 const loader = document.querySelector(".loader");
 let seller;
+
 ///////////////alert box
 let alertbox = document.querySelector(".alert");
 alertbox.style.display = "none";
 const exitbtn = document.querySelector(".closebtn");
 
+////exit btn
 exitbtn.addEventListener("click", function () {
   alertbox.style.display = "none";
 });
@@ -28,7 +28,9 @@ btn.addEventListener("click", function () {
   } else if (password.value.length < 8) {
     showMyAlert("invalid password , should be 8 letters");
   } else {
-    loader.style.display = "block";
+    setTimeout(function () {
+      loader.style.display = "block";
+    }, 2000);
     dataSender("/singup", {
       username: username.value,
       email: email.value,
@@ -41,6 +43,7 @@ btn.addEventListener("click", function () {
 /// get the data and communicate with the server :request to the server and load the information in the webpages using fech(url ,options) methode js
 
 const dataSender = function (path, data) {
+  //console.log("befor fetch");
   fetch(path, {
     method: "post",
     headers: new Headers({ "Content-Type": "application/json" }),
@@ -55,12 +58,18 @@ const dataSender = function (path, data) {
 //////////// function process the data
 
 const processMyData = function (data) {
+  //console.log("else process data");
+
   setTimeout(function () {
-    loader.style.display = "none";
+    loader.style.display = "block";
   }, 2000);
 
   if (data.alert) {
     showMyAlert(data.alert);
+    console.log("existt");
+  } else {
+    console.log(" not exist existt");
+    location.replace("/index.html");
   }
 };
 
@@ -72,7 +81,6 @@ const showMyAlert = function (msg) {
 
   alertmsg.innerHTML = msg;
   alertbox.style.display = "inherit";
-  console.log("cliiiiiiiiiiiiiicked");
 
   setTimeout(function () {
     alertbox.style.display = "none";

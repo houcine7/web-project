@@ -56,7 +56,7 @@ const createNavBar = () => {
 `;
 };
 createNavBar();
-const categories = document.querySelector(".search");
+const categories = document.querySelector(".search-btn");
 
 categories.addEventListener("click", function () {
   console.log("choice 1");

@@ -199,9 +199,9 @@ img {
   padding: 20px 0;
 }
 .container_products {
-  padding: 0 10vw;
-  scroll-behavior: smooth;
-  overflow-x: auto;
+  padding: 0 20px;
+  /* scroll-behavior: smooth; */
+  /* overflow-x: auto; */
   display: flex;
   gap: 10px;
 }
@@ -219,9 +219,9 @@ img {
   margin-bottom: 45px;
 }
 
-.container_products::-webkit-scrollbar {
+/* .container_products::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .proimg {
   overflow: hidden;

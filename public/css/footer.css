@@ -1,49 +1,147 @@
 footer {
-  position: relative;
-  padding: 40px 10vw;
-  width: 100%;
-  padding-bottom: 90px;
   background-color: #4d4d4d;
+  color: #d37823;
 }
 
-.footerele .logo {
-  height: 250px;
-}
-
-.footerele {
+.footer-container {
+  padding: 40px 100px;
   display: flex;
+  gap: 150px;
+  justify-content: space-between;
   align-items: center;
 }
-.ulfooter {
-  width: 45%;
-  justify-content: space-around;
+
+.item {
+  flex: 1 1 0px;
+}
+
+.logoSide {
   display: flex;
-  padding-left: 60%;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
-.linkabout {
-  width: 200px;
-  display: grid;
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.links ul {
   list-style: none;
-  justify-content: space-between;
+  display: inline-flex;
+  gap: 10px;
+  font-size: 14px;
 }
 
-.linkabout a {
-  color: rgb(255, 172, 78);
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
+.links ul li a {
+  color: #e99637;
+  transition: all 0.3s;
 }
 
-.linkabout a:hover {
-  color: rgb(255, 255, 255);
+.links ul li a:hover {
+  color: #f7d5af;
 }
 
-.footerele {
-  color: rgb(211, 120, 35);
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  padding-left: 50px;
-  width: 60%;
+.logoPart {
+  width: 300px;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlePart {
+  font-size: 24px;
+  font-weight: 500;
+  color: #e99637;
+}
+
+.titlePart:hover {
+  color: #f7d5af;
+}
+
+.logoPart img {
+  width: 100px;
+  height: 100px;
+}
+
+.logoPart p {
+  line-height: 1.6;
+}
+
+.contactPart,
+.aboutPart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.media {
+  list-style: none;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mediaLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.facebook,
+.instagram,
+.twitter,
+.call {
+  transition: all 0.3s;
+}
+
+.facebook:hover {
+  color: #4267b2;
+}
+
+.instagram:hover {
+  color: #ca3271;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.call:hover {
+  color: #0e8b29;
+}
+
+.facebook:hover,
+.instagram:hover,
+.twitter:hover,
+.call:hover {
+  cursor: pointer;
+}
+
+.facebook-logo,
+.instagram-logo,
+.twitter-logo,
+.call-logo {
+  font-size: 28px;
+}
+
+.aboutPart {
+  font-size: 16px;
+  line-height: 1.4;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutText {
+  margin-top: 38px;
   text-align: center;
 }

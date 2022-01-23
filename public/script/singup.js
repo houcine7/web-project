@@ -38,7 +38,7 @@ btn.addEventListener("click", function () {
   }
 });
 
-/// get the data and communicate with the server
+/// get the data and communicate with the server :request to the server and load the information in the webpages using fech(url ,options) methode js
 
 const dataSender = function (path, data) {
   fetch(path, {
@@ -55,7 +55,10 @@ const dataSender = function (path, data) {
 //////////// function process the data
 
 const processMyData = function (data) {
-  loader.style.display = "none";
+  setTimeout(function () {
+    loader.style.display = "none";
+  }, 2000);
+
   if (data.alert) {
     showMyAlert(data.alert);
   }

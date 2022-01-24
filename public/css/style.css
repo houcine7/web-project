@@ -212,6 +212,12 @@ img {
   flex: 0 0 auto;
   height: 450px;
 }
+.productr1 {
+  margin-right: 35;
+  width: 250px;
+  flex: 0 0 auto;
+  height: 450px;
+}
 
 .productsreco {
   padding: 0 10vw;
@@ -266,6 +272,10 @@ img {
 .productr:hover .probtn {
   opacity: 1;
 }
+.productr1:hover .probtn {
+  opacity: 1;
+}
+
 .probtn :hover {
   opacity: 1;
 }

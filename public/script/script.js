@@ -86,3 +86,76 @@ categoriesBtn.addEventListener("click", function () {
 searchBtn.addEventListener("click", function () {
   searchInput.focus();
 });
+
+////////////product cantainer : add product
+
+const addProduct = (
+  proname,
+  proimg,
+  prodiscount,
+  oldprice,
+  newprice,
+  productCard
+) => {
+  for (let i = 0; i < productCard.length; i++) {
+    productCard[i].innerHTML =
+      ` <div class="proimg">
+  <span class="discouont">` +
+      prodiscount +
+      ` off </span>
+  <img src="` +
+      proimg +
+      `" alt="" class="trend" />
+  <button class="probtn">add to carts</button>
+</div>
+<div class="infopro">
+  <h2 class="namepro">` +
+      proname +
+      `</h2>
+  <p class="prodes">this a description</p>
+  <span class="oldprice">` +
+      oldprice +
+      `</span>
+  <span class="newprice">` +
+      newprice +
+      `</span>
+</div>`;
+  }
+};
+const productCard1 = document.querySelectorAll(".productr1");
+const productCard2 = document.querySelectorAll(".productr2");
+const productCard3 = document.querySelectorAll(".productr3");
+const productCard4 = document.querySelectorAll(".productr4");
+addProduct(
+  "keyboard 55",
+  "/public/imgs/pro2.png",
+  "70%",
+  10000,
+  7000,
+  productCard1
+);
+addProduct(
+  "keyboard 77",
+  "/public/imgs/pro1.png",
+  "20%",
+  8000,
+  6000,
+  productCard2
+);
+
+addProduct(
+  "computer5245 i52",
+  "/public/imgs/comp2.jpg",
+  "10%",
+  1000,
+  900,
+  productCard3
+);
+addProduct(
+  "the magic gg",
+  "/public/imgs/beauty.png",
+  "30%",
+  500,
+  200,
+  productCard4
+);

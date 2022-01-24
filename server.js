@@ -59,12 +59,12 @@ app.post("/singup", (req, res) => {
         throw err;
       } else {
         for (i = 0; i < result.length; i++) {
-          // console.log(result[i].email);
+          //console.log(result[i].email);
           if (result[i].email == email) {
-            console.log("user alredy exist ");
+            console.log("user already exist ");
 
             try {
-              return res.status(200).json({
+              return res.json({
                 alert: "email already exist try another email",
               });
             } catch (err) {
@@ -73,6 +73,7 @@ app.post("/singup", (req, res) => {
           }
         }
         db.query(sql, [values]);
+        return res.json({ db: "saved in data base" });
       }
     });
   }
@@ -80,6 +81,12 @@ app.post("/singup", (req, res) => {
   //res.json("data recieved");
 });
 
+//login routes
+app.get("/login", (req, res) => {
+  res.sendFile(__dirname + "/public/login.html");
+});
+
+////singup reoutes
 app.get("/singup", (req, res) => {
   res.sendFile(__dirname + "/public/singup.html");
 });

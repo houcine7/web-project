@@ -200,8 +200,9 @@ img {
 }
 .container_products {
   padding: 0 20px;
-  /* scroll-behavior: smooth; */
-  /* overflow-x: auto; */
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: scroll;
   display: flex;
   gap: 10px;
 }

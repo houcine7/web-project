@@ -75,7 +75,7 @@ createNavBar();
 
 const categories = document.querySelector(".select");
 const categoriesBtn = document.querySelector(".select");
-const categories = document.querySelector(".categories");
+//const categories = document.querySelector(".categories");
 const searchBtn = document.querySelector(".search");
 const searchInput = document.querySelector(".search-text");
 

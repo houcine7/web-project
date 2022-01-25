@@ -14,27 +14,41 @@
       <p class="errormsg">This is an alert box.</p>
     </div>
 
-    <div class="singin_info">
-      <h1>Sign Up</h1>
-      <h5>Welcome to Shopping with Lahoucine&Abdellah</h5>
-      <form action="" method="get">
-        <div>
-          <p><label for="userNmae">User Name</label></p>
-          <input type="text" id="userName" autocomplete="off" />
+    <div class="singup_info">
+      <div class="form">
+        <div class="singup_header">
+          <h1>Sign Up</h1>
+          <h5>Welcome to Shopping with Lahoucine&Abdellah</h5>
         </div>
-        <div>
-          <p><label for="email">Email Address</label></p>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div>
-          <p><label for="password">Password</label></p>
-          <input type="password" id="password" required />
-        </div>
-        <button type="button" id="btn">Sign Up Now</button>
-        <p id="login">
-          Already have an account? <a href="login.html">Log in</a>
-        </p>
-      </form>
+        <form action="" method="get">
+          <div>
+            <!-- <p><label for="userNmae">User Name</label></p> -->
+            <input
+              type="text"
+              id="userName"
+              autocomplete="off"
+              placeholder="Username"
+            />
+          </div>
+          <div>
+            <!-- <p><label for="email">Email Address</label></p> -->
+            <input type="email" id="email" name="email" placeholder="Email" />
+          </div>
+          <div>
+            <!-- <p><label for="password">Password</label></p> -->
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="Password"
+            />
+          </div>
+          <button type="button" id="btn">Sign Up Now</button>
+          <p class="message" id="login">
+            Already have an account? <a href="login.html">Log in</a>
+          </p>
+        </form>
+      </div>
     </div>
     <img src="./imgs/load.gif" class="loader" alt="" />
     <script src="./script/singup.js"></script>

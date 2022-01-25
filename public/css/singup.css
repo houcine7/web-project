@@ -1,3 +1,12 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #328f8a;
+  background-image: url("/public/imgs/ph.png");
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
 .loader {
   position: absolute;
   top: 50%;
@@ -8,72 +17,81 @@
   display: none;
 }
 
-body {
-  box-sizing: border-box;
-  font-family: sans-serif;
-  background-image: url("../imgs/ph.png");
-  background-size: cover;
-  background-attachment: fixed;
-  align-items: center;
-  padding-left: 30%;
-  padding-top: 10%;
-}
-
-input {
-  border: none;
+.singup_info {
+  font-size: 18px;
   width: 30%;
-  border-bottom: 1px solid lightgray;
-  background-color: #fbfbfb;
+  padding: 2% 0 0;
+  margin: auto;
+}
+form {
+  margin-top: 30px;
+  margin-bottom: 26px;
+}
+.form {
   position: relative;
-  top: -10px;
-  padding: 5px;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
 }
-input:focus {
-  outline: none;
-  border-bottom: 1px solid #f69e84;
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 80%;
+  padding: 0 auto;
+  border: 0;
+  margin: 0 0 30px;
+  padding: 15px;
+  box-sizing: border-box;
   font-size: 14px;
-  font-weight: bold;
+  border-radius: 5px;
 }
-#password:focus {
-  color: #f69e84;
-  font-size: 16px;
-  font-weight: bold;
-}
-#btn {
-  border: none;
-  background-color: #4d4d4d;
-  border-radius: 20px;
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #ff7d13f3;
+  width: 80%;
+  border: 0;
   padding: 10px;
-  color: white;
-  width: 120px;
-  margin-top: 15px;
-  cursor: pointer;
-}
-p {
-  font-size: small;
-}
-#login {
-  color: aliceblue;
-  padding-left: 10px;
-  font-weight: 200;
-  font-size: 15px;
-}
-
-a {
-  text-decoration: none;
+  color: #ffffff;
   font-size: 20px;
-  font-weight: 600;
-  color: #ffffffe1;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s;
 }
 
-h5 {
-  font-weight: 600;
-  color: azure;
-  text-shadow: 1px 3px #4d4d4d;
+.form button:hover {
+  background-color: #e77212;
 }
 
-h1 {
-  color: #4d4d4d;
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+.form .message a {
+  color: #ff9317;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form .message a:hover {
+  color: #df7c0b;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .alert {
@@ -104,4 +122,11 @@ h1 {
 
 .closebtn:hover {
   color: black;
+}
+
+h5 {
+  color: #df7c0b;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
 }

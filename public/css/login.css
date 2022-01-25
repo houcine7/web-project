@@ -63,3 +63,18 @@ body {
   background-color: #328f8a;
   background-image: url("/public/imgs/ph.png");
 }
+
+.alert {
+  width: 45%;
+  padding: 15px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  font-size: larger;
+  margin-left: 300px;
+  position: absolute;
+  left: 5%;
+  top: 45%;
+  z-index: 9;
+  display: none;
+}

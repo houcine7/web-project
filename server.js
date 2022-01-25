@@ -31,7 +31,7 @@ app.get("/", function (req, res) {
   console.log("geeeeeeeeeeeeeeeeet");
 });
 
-////////// sing up route
+////////// sing up route POST
 app.post("/singup", (req, res) => {
   //get the data
   let { username, email, password, seller } = req.body;
@@ -79,6 +79,56 @@ app.post("/singup", (req, res) => {
   }
   //jason
   //res.json("data recieved");
+});
+
+//LOGIN ROUES POST
+app.post("/login", (req, res) => {
+  let { email, password } = req.body;
+  console.log(email);
+  console.log(password);
+
+  if ((email.length = 0)) {
+    return res.json({ alert: "invalide email" });
+  } else if (password.length < 8) {
+    return res.json({ alert: "invalid password" });
+  } else {
+    // check the database if the user exist or not
+    let sql = "SELECT email from users";
+    db.query(sql, [], (err, result, fields) => {
+      if (err) {
+        console.log("can't execute query ");
+        throw err;
+      } else {
+        for (let i = 0; i < result.length; i++) {
+          if (result[i].email === email) {
+            console.log("user exist in db");
+            let sql2 = `SELECT password from users where email="${email}"`;
+            db.query(sql2, [], (err, result, fields) => {
+              if (err) {
+                console.log("can't exucute query 2");
+                console.log(err.message);
+                throw err;
+              } else {
+                if (result[0].password === password) {
+                  console.log("password correct");
+                  return res.status(200).json({ db: "correct password" });
+                } else {
+                  console.log("password incorrect");
+                  try {
+                    return res.status(400).json({
+                      alertpass: " password incorrect try again",
+                    });
+                  } catch (err) {
+                    console.log(err.message);
+                  }
+                }
+              }
+            });
+          }
+        }
+      }
+    });
+  }
 });
 
 //login routes

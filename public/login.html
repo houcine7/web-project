@@ -9,6 +9,10 @@
   </head>
   <body>
     <body>
+      <div class="alert">
+        <button><span class="closebtn">&times;</span></button>
+        <p class="errormsg">This is an alert box.</p>
+      </div>
       <div class="login-page">
         <div class="form">
           <div class="login">
@@ -18,13 +22,14 @@
             </div>
           </div>
           <form class="login-form">
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>login</button>
+            <input type="email" placeholder="Email" class="email" />
+            <input type="password" placeholder="Password" class="password" />
+            <button type="button" class="btn">login</button>
             <p class="message">Not registered? <a href="#"> Singup Now</a></p>
           </form>
         </div>
       </div>
+      <script src="/public/script/login.js"></script>
     </body>
   </body>
 </html>

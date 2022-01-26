@@ -68,6 +68,7 @@ const processMyData = function (data) {
     console.log("user exist");
   } else {
     console.log(" not exist existt");
+    changeprofilstatus(data.username);
     location.replace("/");
   }
 };
@@ -85,3 +86,18 @@ const showMyAlert = function (msg) {
     alertbox.style.display = "none";
   }, 2000);
 };
+
+/////////
+
+
+
+// const btnprofil1 = document.querySelector(".aboutText");
+// const btnprofil = document.querySelector(".btnstatus");
+// console.log(btnprofil1);
+// const pname = document.querySelector(".profilestatus p");
+// console.log(pname);
+// const changeprofilstatus = function (name) {
+//   pname.innerHTML = "Login as :" + name;
+//   btnprofil.innerHTML = "Logout";
+// };
+// changeprofilstatus("ff");

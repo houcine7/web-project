@@ -61,12 +61,13 @@ const createNavBar = () => {
           <li class="profil-icon">
             <span
               class="iconify nav-icon"
+              id="profileicon"
               data-icon="healthicons:ui-user-profile"
             ></span>
-            <ul>
-              <li>Sign in</li>
-              <li>Join for free</li>
-            </ul>
+            <div class="profilestatus">
+                 <p>Login as : name</p>
+                 <button class="btnstatus">Login</button>
+            </div>
           </li>
         </ul>
 `;
@@ -76,6 +77,7 @@ createNavBar();
 const categoriesBtn = document.querySelector(".select");
 const categories = document.querySelector(".categories");
 const searchBtn = document.querySelector(".search");
+console.log(searchBtn);
 const searchInput = document.querySelector(".search-text");
 
 categoriesBtn.addEventListener("click", function () {
@@ -158,3 +160,30 @@ addProduct(
   200,
   productCard4
 );
+
+/////////// profile status
+const profileicon = document.querySelector(".profil-icon");
+
+console.log(profileicon);
+const profilestatus = document.querySelector(".profilestatus");
+profileicon.addEventListener("click", function () {
+  console.log(profilestatus);
+  profilestatus.style.display = "block";
+
+  setTimeout(function () {
+    profilestatus.style.display = "none";
+  }, 4000);
+});
+
+const btnprofil = document.querySelector(".btnstatus");
+
+btnprofil.addEventListener("click", function () {
+  location.replace("/login");
+});
+
+const pname = document.querySelector(".profilestatus p");
+const changeprofilstatus = function (name) {
+  pname.innerHTML = "Login as :" + name;
+  btnprofil.innerHTML = "Logout";
+};
+// changeprofilstatus("lahoucine");

@@ -69,3 +69,11 @@ const showMyAlert = function (msg) {
     alertbox.style.display = "none";
   }, 4000);
 };
+
+///////////
+const msg = document.querySelector(".message a");
+console.log(msg);
+
+msg.addEventListener("click", () => {
+  location.replace("/singup");
+});

@@ -308,3 +308,27 @@ img {
   text-decoration: line-through;
   color: black;
 }
+/*  profile staus logged in or logged out */
+
+.profilestatus {
+  background-color: #fff;
+  border-radius: 7px;
+  border: solid 2px rgb(255, 115, 0);
+  display: none;
+}
+
+.profilestatus p {
+  font-weight: 400;
+  color: #4d4d4d;
+  font-size: 15px;
+}
+.profilestatus button {
+  background-color: #f79273;
+  color: #fff;
+  align-content: center;
+  margin-left: 24%;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 25px;
+  width: 60px;
+}

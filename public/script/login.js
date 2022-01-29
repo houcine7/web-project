@@ -46,6 +46,7 @@ const dataSender = function (path, data) {
 
 // process the data commes from the sever as a promise
 const processMyData = function (data) {
+  console.log(data);
   if (data.alertpass) {
     console.log("password incorrect");
     showMyAlert(data.alertpass);
@@ -77,3 +78,8 @@ console.log(msg);
 msg.addEventListener("click", () => {
   location.replace("/singup");
 });
+
+// const statusprofile = document.querySelector(".profilestatus");
+
+// console.log(statusprofile);
+// console.log("loooogin");

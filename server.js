@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mysql = require("mysql");
+const { json } = require("express");
 
 /////////// connect with the database ;
 
@@ -92,39 +93,40 @@ app.post("/login", (req, res) => {
   } else if (password.length < 8) {
     return res.json({ alert: "invalid password" });
   } else {
+    console.log("check the database if the user exist or not");
     // check the database if the user exist or not
-    let sql = "SELECT email from users";
+    let sql = `SELECT email from users where email="${email}"`;
     db.query(sql, [], (err, result, fields) => {
       if (err) {
         console.log("can't execute query ");
         throw err;
       } else {
-        for (let i = 0; i < result.length; i++) {
-          if (result[i].email === email) {
-            console.log("user exist in db");
-            let sql2 = `SELECT password from users where email="${email}"`;
-            db.query(sql2, [], (err, result, fields) => {
-              if (err) {
-                console.log("can't exucute query 2");
-                console.log(err.message);
-                throw err;
+        if (result.length === 1) {
+          console.log("user exist in db");
+          let sql2 = `SELECT password from users where email="${email}"`;
+          db.query(sql2, [], (err, result, fields) => {
+            if (err) {
+              console.log("can't exucute query 2");
+              console.log(err.message);
+              throw err;
+            } else {
+              if (result[0].password === password) {
+                console.log("password correct");
+                return res.status(200).json({ db: "correct password" });
               } else {
-                if (result[0].password === password) {
-                  console.log("password correct");
-                  return res.status(200).json({ db: "correct password" });
-                } else {
-                  console.log("password incorrect");
-                  try {
-                    return res.status(400).json({
-                      alertpass: " password incorrect try again",
-                    });
-                  } catch (err) {
-                    console.log(err.message);
-                  }
+                console.log("password incorrect");
+                try {
+                  return res.status(400).json({
+                    alertpass: " password incorrect try again",
+                  });
+                } catch (err) {
+                  console.log(err.message);
                 }
               }
-            });
-          }
+            }
+          });
+        } else if (result.length === 0) {
+          return res.json({ email: "not exist" });
         }
       }
     });

@@ -164,10 +164,9 @@ addProduct(
 /////////// profile status
 const profileicon = document.querySelector(".profil-icon");
 
-console.log(profileicon);
 const profilestatus = document.querySelector(".profilestatus");
 profileicon.addEventListener("click", function () {
-  console.log(profilestatus);
+  // console.log(profilestatus);
   profilestatus.style.display = "block";
 
   setTimeout(function () {
@@ -181,9 +180,9 @@ btnprofil.addEventListener("click", function () {
   location.replace("/login");
 });
 
-const pname = document.querySelector(".profilestatus p");
-const changeprofilstatus = function (name) {
-  pname.innerHTML = "Login as :" + name;
-  btnprofil.innerHTML = "Logout";
-};
+// const pname = document.querySelector(".profilestatus p");
+// const changeprofilstatus = function (name) {
+//   pname.innerHTML = "Login as :" + name;
+//   btnprofil.innerHTML = "Logout";
+// };
 // changeprofilstatus("lahoucine");

@@ -28,7 +28,7 @@ const createNavBar = () => {
               data-icon="akar-icons:chevron-down"
             ></span>
             </div>
-            All categories
+            <p class="catchoice">All categories</p>
           <div class="search">
             <span
               class="iconify search-icon"
@@ -57,6 +57,7 @@ const createNavBar = () => {
           <li class="cart-icon">
             <span class="iconify nav-icon" data-icon="bi:cart-dash"></span
             ><span>Cart</span>
+
           </li>
           <li class="profil-icon">
             <span
@@ -81,7 +82,7 @@ console.log(searchBtn);
 const searchInput = document.querySelector(".search-text");
 
 categoriesBtn.addEventListener("click", function () {
-  categories.classList.toggle("hidden");
+  categories.style.display = "block";
 });
 
 searchBtn.addEventListener("click", function () {
@@ -180,9 +181,12 @@ btnprofil.addEventListener("click", function () {
   location.replace("/login");
 });
 
-// const pname = document.querySelector(".profilestatus p");
-// const changeprofilstatus = function (name) {
-//   pname.innerHTML = "Login as :" + name;
-//   btnprofil.innerHTML = "Logout";
-// };
-// changeprofilstatus("lahoucine");
+const catelement = document.querySelectorAll(".element");
+const choicec = document.querySelector(".catchoice");
+for (let i = 0; i < catelement.length; i++) {
+  catelement[i].addEventListener("click", function () {
+    console.log(catelement.innerHTML);
+    choicec.innerHTML = catelement[i].innerHTML;
+    categories.style.display = "none";
+  });
+}

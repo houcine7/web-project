@@ -68,7 +68,6 @@ const processMyData = function (data) {
     console.log("user exist");
   } else {
     console.log(" not exist existt");
-    changeprofilstatus(data.username);
     location.replace("/");
   }
 };
@@ -88,8 +87,6 @@ const showMyAlert = function (msg) {
 };
 
 /////////
-
-
 
 // const btnprofil1 = document.querySelector(".aboutText");
 // const btnprofil = document.querySelector(".btnstatus");

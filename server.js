@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const mysql = require("mysql");
-const { json } = require("express");
 
 /////////// connect with the database ;
 
@@ -29,7 +28,6 @@ app.use(express.static(pathstat));
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
-  console.log("geeeeeeeeeeeeeeeeet");
 });
 
 ////////// sing up route POST
@@ -141,6 +139,10 @@ app.get("/login", (req, res) => {
 ////singup reoutes
 app.get("/singup", (req, res) => {
   res.sendFile(__dirname + "/public/singup.html");
+});
+/////// product routes
+app.get("/product", (req, res) => {
+  res.sendFile(__dirname + "/public/product.html");
 });
 
 ///// 404 route

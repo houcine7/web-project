@@ -7,4 +7,12 @@ use ecomerce;
   insert into users values (2,"houcine","houcine@gmail.com","passwordkcwsj", true);
  
  select * from users;
- /*delete from users where iduser between 43 and 60 ; */
+  select * from product;
+ /*delete from users where iduser=89;
+ delete from users where iduser between 111 and 112 ; */
+ 
+ create table product(idp int Primary key, namep varchar(50) ,oldprice int , newprice int  , discount int , img varchar(100));
+ 
+ insert into product values(3,"t-shirta",5000,3000,70,"/public/imgs/pro3.png");
+ show tables ;
+ alter table product add column(categorie varchar(50));

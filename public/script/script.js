@@ -56,14 +56,20 @@ const createNavBar = () => {
         <ul class="nav-left">
           <li class="cart-icon">
           <ul class="cart-categories hidden">
+<<<<<<< HEAD
           <li class="element">Beaute & Parfum</li>
           <li class="element">Beaute premium</li>
           <li class="element">Cuisine & Maison</li>
           <li class="element">Chaussures & Sacs</li>
+=======
+          <li class="element1"></li>
+          <li class="element2"></li>
+          <li class="element3"></li>
+          <li class="element4"></li>
+>>>>>>> be0821e (new commit)
         </ul>
             <span class="iconify nav-icon" data-icon="bi:cart-dash"></span
             ><span>Cart</span>
-
           </li>
           <li class="profil-icon">
             <span
@@ -119,7 +125,11 @@ const addProduct = (
   <img src="` +
       proimg +
       `" alt="" class="trend" />
+<<<<<<< HEAD
   <button class="probtn"><a href="product.html">add to carts</a></button>
+=======
+  <button class="probtn"><a href="#">add to carts</a></button>
+>>>>>>> be0821e (new commit)
 </div>
 <div class="infopro">
   <h2 class="namepro">` +
@@ -201,3 +211,11 @@ for (let i = 0; i < catelement.length; i++) {
     categories.style.display = "none";
   });
 }
+
+const addTocart = document.querySelector(".probtn");
+const ele = document.querySelector(".element1");
+
+addTocart.addEventListener("click", () => {
+  ele.innerHTML = " pro name";
+  location.replace("/product");
+});

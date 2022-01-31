@@ -86,6 +86,13 @@ const showMyAlert = function (msg) {
   }, 2000);
 };
 
+/// to login
+
+const msg = document.querySelector(".message");
+msg.addEventListener("click", function () {
+  location.replace("/login");
+});
+
 /////////
 
 // const btnprofil1 = document.querySelector(".aboutText");

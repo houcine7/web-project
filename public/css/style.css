@@ -128,7 +128,8 @@ img {
   color: #f7dbd2;
 }
 
-.categories {
+.categories,
+.cart-categories {
   position: absolute;
   top: 60px;
   /* left: 50%; */
@@ -141,6 +142,10 @@ img {
   height: 300px;
   width: 150px;
   overflow-y: scroll;
+}
+
+.cart-categories {
+  height: 150px;
 }
 
 .element {
@@ -269,6 +274,12 @@ img {
   transition: 0.5s;
   opacity: 0;
 }
+
+.probtn a {
+  text-decoration: none;
+  color: #111010;
+}
+
 .productr:hover .probtn {
   opacity: 1;
 }

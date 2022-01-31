@@ -55,6 +55,12 @@ const createNavBar = () => {
         </div>
         <ul class="nav-left">
           <li class="cart-icon">
+          <ul class="cart-categories hidden">
+          <li class="element">Beaute & Parfum</li>
+          <li class="element">Beaute premium</li>
+          <li class="element">Cuisine & Maison</li>
+          <li class="element">Chaussures & Sacs</li>
+        </ul>
             <span class="iconify nav-icon" data-icon="bi:cart-dash"></span
             ><span>Cart</span>
 
@@ -78,7 +84,8 @@ createNavBar();
 const categoriesBtn = document.querySelector(".select");
 const categories = document.querySelector(".categories");
 const searchBtn = document.querySelector(".search");
-console.log(searchBtn);
+const cartBtn = document.querySelector(".cart-icon");
+const cartCategories = document.querySelector(".cart-categories");
 const searchInput = document.querySelector(".search-text");
 
 categoriesBtn.addEventListener("click", function () {
@@ -87,6 +94,10 @@ categoriesBtn.addEventListener("click", function () {
 
 searchBtn.addEventListener("click", function () {
   searchInput.focus();
+});
+
+cartBtn.addEventListener("click", () => {
+  cartCategories.classList.toggle("hidden");
 });
 
 ////////////product cantainer : add product
@@ -108,7 +119,7 @@ const addProduct = (
   <img src="` +
       proimg +
       `" alt="" class="trend" />
-  <button class="probtn">add to carts</button>
+  <button class="probtn"><a href="product.html">add to carts</a></button>
 </div>
 <div class="infopro">
   <h2 class="namepro">` +
